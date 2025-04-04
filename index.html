@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="principal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Righteous&display=swap" rel="stylesheet">
+    <title>Practica no.9</title>
+    <script>
+        let nombre = prompt("Escribe tu nombre:");
+        let rfc = prompt("Ingrese su RFC");
+        let antiguo =prompt("¿Cuántos años tienes trabajando?");
+        let sueldo =prompt("Ingrese su sueldo:");
+        let ren = prompt("¿Cuántos renglones necesitas?");
+        let y;
+        let color;
+        let bono;
+        let sueldoact;
+        let img = "img/" + rfc + ".png"
+        ;  
+
+        if (antiguo >= 8) {
+            bono = 0.40 * sueldo;
+            sueldoact = sueldo * 1.4;
+            document.write("Hola <b>" + nombre + "</b>! Tu bono es: <b>" + bono + "</b>" +
+            " y tu sueldo más el bono es: <b>" + sueldoact + "</b>");
+        } else {
+            document.write("Hola <b>" + nombre + "</b>! Lo sentimos, pero no cumples con la promoción");
+        }
+
+        document.write("<table border=1>");
+        document.write("<tr style='background-color:#6d0958;'>" + 
+        "<th><h3>#</h3></th>" +    
+        "<th><h3>Nombre</h3></th>" +
+        "<th><h3>RFC</h3></th>"+
+        "<th><h3>Bono</h3></th>" +
+        "<th><h3>Sueldo general</h3></th>" +
+        "<th><h3>Sueldo con bono</h3></th>" +
+        "<th><h3>Foto</h3></th>" +
+     "</tr>");
+
+     document.write("<tr style='background-color:#dfa4d3;'>" +
+        "<td><h4>1</h4></td>" +  
+        "<td><h4>" + nombre + "</h4></td>" +
+        "<td><h4>" + rfc + "</h4></td>" +
+        "<td><h4>" + (antiguo >= 8 ? bono : "No cumple") + "</h4></td>" +
+        "<td><h4>" + sueldo + "</h4></td>" +
+        "<td><h4>" + (antiguo >= 8 ? sueldoact : "No cumple")+ "</h4></td>" +
+       "<td><img src='" + img+ "'width=50 height=50></td>" +
+    "</tr>");
+  
+
+    for (let y = 2; y <= ren; y++) {
+    let color = (y % 2 === 0) ? "#6d0958" : "#dfa4d3"; 
+    document.write("<tr bgcolor='" + color + "'>" + 
+        "<td><h4>" + y + "</h4></td>" + 
+        "<td></td>" +
+        "<td></td>" +
+        "<td></td>" +
+        "<td></td>" +
+        "<td></td>" +
+        "<td></td>" +
+    "</tr>");
+}
+
+        document.write("</table>");
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+h3{ color:#ececec;font-size:20px;font-family:"Righteous";text-align: center;}
+
+h4{ color:#01112c;font-size:20px;font-family:"Maven+Pro";text-align: center;}
+
+
+table {
+    width: 50%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto; 
+    text-align: center; 
+}
+body {
+    background-color: rgb(192, 173, 233); 
+  }
+@media screen and (max-width: 500px) { 
+    body { 
+        background-color: rgb(177, 209, 219); 
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1600px) {
+    body {
+        background-color: rgb(231, 188, 211);
+    }
+}
